@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            max-width: 80%;
+            margin: auto;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .decrease-demo {
+            margin-bottom: 200px;
+        }
+
+        #decrease, .decrease-demo {
+            border: 2px solid #000;
+            max-width: 200px;
+            max-height: 60px;
+        }
+
+        .increase-demo {
+            margin-bottom: 200px;
+        }
+
+        #increase, .increase-demo {
+            border: 2px solid red;
+            font-size: 5px;
+        }
+
+        #increase span, .increase-demo span {
+            display: inline-block;
+            max-width: 200px;
+            max-height: 60px;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>Decrease Demo</h1>
+
+            <div class="decrease-demo">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, saepe iusto amet quasi illum consequatur exercitationem incidunt quisquam, temporibus excepturi similique voluptatum quas asperiores odit. Vel quas magni fugit est?
+            </div>
+
+            <div id="decrease">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Esse, saepe iusto amet quasi illum consequatur exercitationem incidunt quisquam, temporibus excepturi similique voluptatum quas asperiores odit. Vel quas magni fugit est?
+            </div>
+        </div>
+    
+        <div>
+            <h1>Increase Demo</h1>
+            
+            <div class="increase-demo">
+                <span>Lorem ipsum</span>
+            </div>
+    
+            <div id="increase">
+                <span>Lorem ipsum</span>
+            </div>
+        </div>
+    </main>
+
+    <script src="TextMod.js"></script>
+    <script>
+        var settings = {
+            debug: true,
+            elemSelector: '#decrease',
+        }
+
+        TextModInit(settings);
+        
+        settings.elemSelector = '#increase span';
+
+        TextModInit(settings)
+    </script>
+</body>
+</html>
